@@ -329,7 +329,7 @@
 
   // Initial screen
   startBtn.style.display = 'block';
-  showCenterCard('Tappy Doge', 'Tıkla / Boşluk / ↑ / Dokun → Zıpla', 'Rekoru geç bakalım!');
+  showCenterCard('Tappy Dogz', 'Tıkla / Boşluk / ↑ / Dokun → Zıpla', 'Rekoru geç bakalım!');
   loop();
 })();
 </script>
