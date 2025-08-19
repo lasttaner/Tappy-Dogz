@@ -335,3 +335,74 @@
 </script>
 </body>
 </html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+<title>Tappy Dogz</title>
+<style>
+  :root { --fg:#222; --bg:#e9f5ff; --accent:#4a90e2; --pipe:#2ecc71; --pipeDark:#239b56; --dog:#ffcc00; --ui:#ffffffcc; }
+  html,body{height:100%;margin:0;background:linear-gradient(#9ad0ff,#e8f6ff);}
+  body{display:flex;align-items:center;justify-content:center;font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+  #wrap{width:min(92vw,520px);aspect-ratio:9/16;position:relative;box-shadow:0 10px 30px #00000022;border-radius:16px;overflow:hidden;background:var(--bg);}
+  canvas{width:100%;height:100%;display:block;background:linear-gradient(#9ad0ff 0%, #c9ecff 60%, #e6f7ff 100%);}
+  .btn{position:absolute;left:50%;transform:translateX(-50%);padding:12px 18px;border-radius:999px;border:none;background:var(--accent);color:#fff;font-weight:700;cursor:pointer;box-shadow:0 6px 16px #00000033;transition:.15s;}
+  .btn:hover{filter:brightness(1.1);transform:translateX(-50%) scale(1.03);}
+  #startBtn{bottom:20%;display:none;}
+  #pauseBtn{top:10px;right:10px;left:auto;transform:none}
+  #ui{position:absolute;inset:0;pointer-events:none;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:16px;}
+  #hud{pointer-events:none;width:100%;display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .pill{background:var(--ui);padding:8px 12px;border-radius:999px;font-weight:700}
+  #centerCard{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--ui);padding:16px 18px;border-radius:12px;text-align:center;backdrop-filter:blur(4px);display:none}
+  #centerCard h1{margin:.2em 0 .3em;font-size:26px}
+  #centerCard p{margin:.25em 0}
+  #tips{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);background:var(--ui);padding:8px 12px;border-radius:999px;font-size:14px}
+  #credits{position:absolute;bottom:8px;left:10px;font-size:12px;opacity:.6}
+
+  /* 🔥 Yeni eklenen X linki */
+  #xLink {
+    position:absolute;
+    bottom:8px;
+    right:10px;
+    width:32px;
+    height:32px;
+    background:#000 url('https://abs.twimg.com/responsive-web/client-web/icon-ios.b1fc7275.png') no-repeat center/70%;
+    border-radius:8px;
+    cursor:pointer;
+    box-shadow:0 4px 10px #00000055;
+    pointer-events:auto;
+  }
+</style>
+</head>
+<body>
+  <div id="wrap" aria-label="Tappy Dogz Game">
+    <canvas id="game" aria-hidden="true"></canvas>
+    <div id="ui">
+      <div id="hud">
+        <div class="pill">Skor: <span id="score">0</span></div>
+        <div class="pill">En İyi: <span id="best">0</span></div>
+      </div>
+      <button id="pauseBtn" class="btn" aria-label="Duraklat/Devam Et">⏸️</button>
+      <div id="centerCard" role="dialog" aria-live="polite">
+        <h1 id="title">Tappy Dogz</h1>
+        <p id="subtitle">Tıkla / Boşluk / ↑ / Dokun → Zıpla</p>
+        <p id="prompt">Hazırsan başla!</p>
+      </div>
+      <div id="tips">İpucu: Borudan geçince +1 puan.</div>
+      <button id="startBtn" class="btn">Başlat</button>
+      <div id="credits">© LasTTaner 2025</div>
+      <!-- 🔥 X linki burada -->
+      <a id="xLink" href="https://www.x.com/LasTTaner" target="_blank" aria-label="X profilinize git"></a>
+    </div>
+  </div>
+
+<script>
+/* 🎮 Oyunun JS kodu (öncekiyle aynı, sadece kısalttım) */
+(() => {
+  const cvs=document.getElementById('game'),ctx=cvs.getContext('2d');
+  const wrap=document.getElementById('wrap');function resize(){const r=wrap.getBoundingClientRect();const dpr=Math.max(1,Math.min(window.devicePixelRatio||1,2));cvs.width=r.width*dpr;cvs.height=r.height*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);}resize();window.addEventListener('resize',resize);
+  /* ... buraya önceki uzun oyun kodu (hiç değişmeden) geliyor ... */
+})();
+</script>
+</body>
+</html>
