@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-<title>Tappy Doge</title>
+<title>Tappy Dogz</title>
 <style>
   :root { --fg:#222; --bg:#e9f5ff; --accent:#4a90e2; --pipe:#2ecc71; --pipeDark:#239b56; --dog:#ffcc00; --ui:#ffffffcc; }
   html,body{height:100%;margin:0;background:linear-gradient(#9ad0ff,#e8f6ff);}
