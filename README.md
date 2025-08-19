@@ -25,7 +25,7 @@
 </style>
 </head>
 <body>
-  <div id="wrap" aria-label="Tappy Doge Game">
+  <div id="wrap" aria-label="Tappy Dogz Game">
     <canvas id="game" aria-hidden="true"></canvas>
     <div id="ui">
       <div id="hud">
@@ -34,13 +34,13 @@
       </div>
       <button id="pauseBtn" class="btn" aria-label="Duraklat/Devam Et">⏸️</button>
       <div id="centerCard" role="dialog" aria-live="polite">
-        <h1 id="title">Tappy Doge</h1>
+        <h1 id="title">Tappy Dogz</h1>
         <p id="subtitle">Tıkla / Boşluk / ↑ / Dokun → Zıpla</p>
         <p id="prompt">Hazırsan başla!</p>
       </div>
       <div id="tips">İpucu: Borudan geçince +1 puan.</div>
       <button id="startBtn" class="btn">Başlat</button>
-      <div id="credits">© mini by Akira</div>
+      <div id="credits">© LasTTaner 2025</div>
     </div>
   </div>
 
